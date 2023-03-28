@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tempdevicesim"
+description = "Simulation of a temperature device web interface"
+authors = [
+    { name = "Ulrik Pedersen", email = "ukp@observatorysciences.co.uk" }
+]
+dependencies = [
+    "flask"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dynamic = ["version"]
+license.file = "LICENSE"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "mypy",
+    "flake8-isort",
+    "Flake8-pyproject",
+    "pipdeptree",
+    "pre-commit",
+    "pydata-sphinx-theme>=0.12",
+    "pytest-cov",
+    "sphinx-autobuild",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "toml",
+    "tox-direct",
+    "types-mock",
+    "types-toml",
+]
+
+[project.scripts]
+temp-device-sim = "app.__main__:main"
+
+
+[tool.setuptools_scm]
+write_to = "src/app/_version.py"
+
+[tool.mypy]
+ignore_missing_imports = true # Ignore missing stubs in imported modules
+
+[tool.isort]
+float_to_top = true
+profile = "black"
+
+[tool.flake8]
+extend-ignore = [
+    "E203", # See https://github.com/PyCQA/pycodestyle/issues/373
+    "F811", # support typing.overload decorator
+    "F722", # allow Annotated[typ, some_func("some string")]
+]
+max-line-length = 88 # Respect black's line length (default 88),
+exclude = [".tox", ".venv"]
+

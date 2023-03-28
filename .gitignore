@@ -1,0 +1,104 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@ulrikpedersen 
+
+ GitHub users are now required to enable two-factor authentication as an additional security measure. Your activity on GitHub includes you in this requirement. You will need to enable two-factor authentication on your account before May 04, 2023, or be restricted from account actions.
+
+DiamondLightSource
+/
+python3-pip-skeleton-cli
+Public
+Fork your own copy of DiamondLightSource/python3-pip-skeleton-cli
+Code
+Issues
+7
+Pull requests
+5
+Discussions
+Actions
+Projects
+Security
+Insights
+python3-pip-skeleton-cli/.gitignore
+@gilesknap
+gilesknap fix .dockerignore, build options
+Latest commit 7b0423d on Oct 18, 2022
+ History
+ 2 contributors
+@coretl@gilesknap
+69 lines (57 sloc)  824 Bytes
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+.venv
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+**/_version.py
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+cov.xml
+.pytest_cache/
+.mypy_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# likely venv names
+.venv*
+venv*
+
+# further build artifacts
+lockfiles/
