@@ -44,6 +44,8 @@ dev = [
 [project.scripts]
 temp-device-sim = "app.__main__:main"
 
+[tool.setuptools.package-data]
+app = ["templates/*.html"]
 
 [tool.setuptools_scm]
 write_to = "src/app/_version.py"
