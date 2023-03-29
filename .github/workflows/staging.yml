@@ -1,0 +1,23 @@
+name: Staging
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.12.1
+        env:
+          CIBW_SKIP: pp*
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ./wheelhouse/*.whl
