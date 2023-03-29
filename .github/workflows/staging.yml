@@ -15,8 +15,8 @@ jobs:
 
       - name: Build wheels
         run: |
-          pip wheel -w wheelhouse/ .
+          python -m build
 
       - uses: actions/upload-artifact@v3
         with:
-          path: ./wheelhouse/*.whl
+          path: ./dist/*.whl
